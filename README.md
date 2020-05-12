@@ -7,7 +7,8 @@ Set up a virtualenv if you wish, navigate to this directory and do
 `pip install -r requirements.txt`
 
 ## Usage
-```usage: image2OLED.py [-h] [-o] [-p] [-d] [-s] [-x WIDTH] [-y HEIGHT] [-w] inputfile
+```
+usage: image2OLED.py [-h] [-o] [-p] [-d] [-s] [-x WIDTH] [-y HEIGHT] [-w] inputfile
 
 positional arguments:
   inputfile             Path to the image file to convert
