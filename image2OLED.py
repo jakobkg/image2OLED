@@ -3,15 +3,13 @@ from PIL import Image
 
 parser = argparse.ArgumentParser()
 parser.add_argument("inputfile", help="Path to the image file to convert")
-parser.add_argument("-o", "--output",
-                    help="Set flag to output array with the same filename as the input file, with filetype .c. If not set, the C array is printed to terminal",
-                    action="store_true")
+parser.add_argument("-o", "--output", help="Path to output file with the C array, if not given the same filename as the input is used, with filetype .c", action="store_true")
 parser.add_argument("-p", "--preview", help="Print the resulting image to the terminal", action="store_true")
 parser.add_argument("-d", "--dither", help="Set flag to dither image in conversion from colour to BW, if applicable", action="store_true")
 parser.add_argument("-s", "--small", help="Set flag if your OLED has a resolution of 128x32 instead of 128x64", action="store_true")
-parser.add_argument("-w", "--width", help="Pixel width of your OLED", type=int)
-parser.add_argument("-h", "--height", help="Pixel height of your OLED. If no OLED resolution information is given, 128x64 is assumed", type=int)
-parser.add_argument("--white",
+parser.add_argument("-x", "--width", help="Pixel width of your OLED", type=int)
+parser.add_argument("-y", "--height", help="Pixel height of your OLED. If no OLED resolution information is given, 128x64 is assumed", type=int)
+parser.add_argument("-w", "--white",
                     help="If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED will be white instead of black", action="store_true")
 
 args = parser.parse_args()
@@ -19,10 +17,10 @@ args = parser.parse_args()
 ## Some argument checking to be sure given input isn't goobledigook
 
 if args.small and (args.width or args.height):
-    exit("Use only -s/--small OR -w/--width <WIDTH> -h/--height <HEIGHT> to set your OLED resolution")
+    exit("Use only -s/--small OR -x/--width <WIDTH> -y/--height <HEIGHT> to set your OLED resolution")
 
 if (args.width is None and args.height is not None) or (args.width is not None and args.height is None):
-    exit("Please provide both width and height of your OLED: -w <WIDTH> -h <HEIGHT>")
+    exit("Please provide both width and height of your OLED: -x <WIDTH> -y <HEIGHT>")
 
 if (args.width and args.width <= 0) or (args.height and args.height <= 0):
     exit("Given OLED resolution must be positive integers")

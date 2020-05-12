@@ -19,11 +19,11 @@ optional arguments:
   -p, --preview         Print the resulting image to the terminal
   -d, --dither          Set flag to dither image in conversion from colour to BW, if applicable
   -s, --small           Set flag if your OLED has a resolution of 128x32 instead of 128x64
-  -w WIDTH, --width WIDTH
+  -x WIDTH, --width WIDTH
                         Pixel width of your OLED
-  -h HEIGHT, --height HEIGHT
+  -y HEIGHT, --height HEIGHT
                         Pixel height of your OLED. If no OLED resolution information is given, 128x64 is assumed
-  --white           If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
+  -w, --white           If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
                         will be white instead of black
 ```
 
