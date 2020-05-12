@@ -7,7 +7,7 @@ Set up a virtualenv if you wish, navigate to this directory and do
 `pip install -r requirements.txt`
 
 ## Usage
-usage: image2OLED.py [-h] [-o] [-p] [-d] [-s] [-x WIDTH] [-y HEIGHT] [-w] inputfile
+```usage: image2OLED.py [-h] [-o] [-p] [-d] [-s] [-x WIDTH] [-y HEIGHT] [-w] inputfile
 
 positional arguments:
   inputfile             Path to the image file to convert
@@ -25,3 +25,4 @@ optional arguments:
                         Pixel height of your OLED. If no OLED resolution information is given, 128x64 is assumed
   -w, --white           If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
                         will be white instead of black
+```
