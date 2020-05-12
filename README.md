@@ -2,7 +2,6 @@
  A python script to convert image files to C arrays that display on OLEDs like the one found on Kyria mechanical keyboards
 
 ## Setup
-
 Set up a virtualenv if you wish, navigate to this directory and do
 `pip install -r requirements.txt`
 
@@ -27,3 +26,7 @@ optional arguments:
   -w, --white           If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
                         will be white instead of black
 ```
+
+## Credits
+This is heavily based on XScorpion2's C# implementation of the same idea, ported to Python 3 and extended to support most image formats
+https://github.com/XScorpion2/Bitmap2OLED
