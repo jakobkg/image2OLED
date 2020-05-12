@@ -23,7 +23,7 @@ optional arguments:
                         Pixel width of your OLED
   -h HEIGHT, --height HEIGHT
                         Pixel height of your OLED. If no OLED resolution information is given, 128x64 is assumed
-  --white               If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
+  --white           If set, the padding on images with an aspect ratio different to the aspect ratio of your OLED
                         will be white instead of black
 ```
 
